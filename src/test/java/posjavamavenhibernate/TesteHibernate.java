@@ -17,7 +17,6 @@ public class TesteHibernate {
 		UsuarioPessoa pessoa = new UsuarioPessoa();
 		pessoa.setNome("Paulo");
 		pessoa.setSobrenome("Santos");
-		pessoa.setEmail("josecarlosjs11@gmail.com");
 		pessoa.setLogin("carlos");
 		pessoa.setSenha("123");
 		pessoa.setIdade(22);
@@ -53,7 +52,7 @@ public class TesteHibernate {
 	}
 
 	@Test
-	public void testeDelete() {
+	public void testeDelete() throws Exception {
 		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
 		UsuarioPessoa pessoa = daoGeneric.pesquisar(2L, UsuarioPessoa.class);
 		daoGeneric.deletarPorId(pessoa);
